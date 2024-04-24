@@ -1,0 +1,23 @@
+{{block "index" .}}
+<html>
+  <head>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <title>Go Spike</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to our first HTML site!</h1>
+      <p>Here you will find some information about us.</p>
+    </header>
+
+    <section>
+      <h2>Companies</h2>
+      <ul>
+        {{range .}}
+        <li>ID: {{.ID}}, Name: {{.Name}}</li>
+        {{end}}
+      </ul>
+    </section>
+  </body>
+</html>
+{{end}}
